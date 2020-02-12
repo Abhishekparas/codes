@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+void dec(){
+	int N;
+	cin>>N;
+	int rem;
+	int sum = 0;
+	int i = 0;
+	while(N>0){
+		rem = N%10;
+		sum = sum + rem *pow(2,i);
+		N = N/10;
+		i++;
+		
+
+
+	}
+	cout<<sum;
+}
+int main() {
+	dec();
+	
+	return 0;
+}
