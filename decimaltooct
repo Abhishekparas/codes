@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int N;
+	cin>>N;
+	int rem[100];
+	int j=0;
+	while(N>0){
+		
+		rem[j] = N%8;
+		N = N/8;
+		j++;
+	}
+	for(int i=j-1; i>=0; i--){
+		cout<<rem[i];
+	}
+	
+	
+	
+	return 0;
+}
