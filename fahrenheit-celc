@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int min;
+	int max;
+	int step;
+	cin>>min>>max>>step;
+	for(int i=min; i<=max; i=i+step){
+		cout<<i<<" "<<(5*(i-32))/9<<endl;
+	}
+	return 0;
+}
