@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+void replace(string input, string output){
+	if(input.length() == 0){
+		cout<<output<<endl;
+		return;
+	}
+	
+
+	if(input.length() >=2 && input[0] == 'p' && input[1] == 'i'){
+		string a = output+"3.14";
+		string b = input.substr(2);
+		replace(b, a);		
+	}
+	else{
+		string a = output + input[0];
+		string b = input.substr(1);
+		replace(b, a);	
+	}
+	
+
+}
+
+int main(int argc, char const *argv[])
+{
+	string str;
+	int n;
+	cin>>n;
+	for(int i=0; i<n; i++){
+		cin>>str;
+		replace(str," ");
+	}
+	
+	
+
+	
+
+
+	return 0;
+}
