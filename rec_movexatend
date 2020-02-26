@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+void movex(string input, string output){
+	int xcount =0;
+	if(input.length()==0){
+		cout<<output;
+		return;
+	}
+
+	int len = output.length();
+	if(input[0]=='x'){
+		xcount++;
+		string ros = input.substr(1);
+		string osf = output;
+		movex(ros,osf);
+	}
+	else{
+		string ros = input.substr(1);
+		string osf = output + input[0];
+		movex(ros,osf);
+	}
+	while(xcount){
+			cout<<"x";
+			xcount--;
+	}
+}
+int main() {
+	string str;
+	cin>>str;
+	movex(str," ");
+	return 0;
+}
