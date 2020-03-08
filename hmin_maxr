@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+void miniMaxSum(long long int* arr){
+    long long int min = *min_element(arr,arr+5);
+    long long int max = *max_element(arr,arr+5);
+    long long int sum1 = 0;
+    for(long long int i=0; i<5; i++){
+        sum1 += arr[i];
+    }
+    unsigned long long int temp = sum1-max;
+    unsigned long long int temp1 = sum1-min;
+    cout<<temp<<" "<<temp1;
+
+
+}
+int main(){
+    long long int* arr = new long long int[(sizeof(long long int))];
+    for(long long int i=0; i<5; i++){
+        cin>>arr[i];
+    }
+    miniMaxSum(arr);
+    return 0;
+}
