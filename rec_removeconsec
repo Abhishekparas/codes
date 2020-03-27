@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Complete the superReducedString function below.
+void superReducedString(string input, string output){
+    if(input.length() == 0){
+        if(output.length() == 0){
+            cout<<"Empty String";
+        }
+        else{
+            cout<<output;
+        }
+        
+        return;
+    }
+    if(input.length() >=2 && input[0] == input[1]){
+        string a= input.substr(2);
+        string b = output;
+        superReducedString(a,b);
+    }
+    else{
+        string a= input.substr(1);
+        string b= output+input[0];
+        superReducedString(a,b);
+    }
+}
+
+
+int main()
+{
+    string str;
+    cin>>str;
+    superReducedString(str,"");
+
+    return 0;
+}
