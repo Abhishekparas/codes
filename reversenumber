@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	
+	int t;
+	cin>>t;
+
+	while(t--){
+	    int num,temp;
+	    cin>>num;
+      int rev = 0;
+	    while(num>0){
+	        temp =num %10;
+          rev = rev*10 +temp;
+	        num = num/10;
+      }
+      cout<<rev;
+	    cout<<endl;
+	}
+	return 0;
+}
